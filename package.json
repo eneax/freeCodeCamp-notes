@@ -9,6 +9,10 @@
     "ecmascript"
   ],
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eneax/freeCodeCamp-notes"
+  },
   "author": "Enea Xharja <eneaxharja@gmail.com>",
   "license": "MIT",
   "scripts": {

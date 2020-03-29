@@ -16,8 +16,8 @@
   "author": "Enea Xharja <eneaxharja@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

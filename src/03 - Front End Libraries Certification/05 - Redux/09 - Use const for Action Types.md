@@ -1,0 +1,44 @@
+# Use const for Action Types
+
+In Redux, it's common practice to assign `action types` as read-only `constants` and .
+
+```js
+// action types
+const LOGIN = "LOGIN";
+const LOGOUT = "LOGOUT";
+
+const defaultState = {
+  authenticated: false
+};
+
+const authReducer = (state = defaultState, action) => {
+  switch (action.type) {
+    case LOGIN:
+      return {
+        authenticated: true
+      };
+
+    case LOGOUT:
+      return {
+        authenticated: false
+      };
+
+    default:
+      return state;
+  }
+};
+
+const store = Redux.createStore(authReducer);
+
+const loginUser = () => {
+  return {
+    type: LOGIN
+  };
+};
+
+const logoutUser = () => {
+  return {
+    type: LOGOUT
+  };
+};
+```

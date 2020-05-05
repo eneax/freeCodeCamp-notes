@@ -1,7 +1,7 @@
 # Declare JavaScript Variables
 
 Variables allow computers to store and manipulate data.
-You can think of variable as a simple and shorter name that we use to represent the data we want to refer to,
+You can think of a variable as a simple and shorter name that we use to represent the data we want to refer to,
 kind of like the `x` and `y` in mathematics.
 
 Computer variables, however, can store not only numbers, but different values at different times.

@@ -1,0 +1,65 @@
+# Use the value attribute with Radio Buttons and Checkboxes
+
+When we click the submit button on a form, the data is sent to the server and includes entries for the selected options. Inputs of type `radio` and `checkbox` report their values from the `value` attribute.
+
+If you omit the `value` attribute, the submitted form data uses the default value, which is `on` (not very useful). So the `value` attribute needs to be set to something to identify the option.
+
+```html
+<h2>CatPhotoApp</h2>
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#">
+    <img
+      src="https://bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back."
+    />
+  </a>
+
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
+    <label for="indoor">
+      <input id="indoor" value="indoor" type="radio" name="indoor-outdoor" />
+      Indoor
+    </label>
+    <label for="outdoor">
+      <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor" />
+      Outdoor
+    </label>
+    <br />
+    <label for="loving">
+      <input id="loving" value="loving" type="checkbox" name="personality" />
+      Loving
+    </label>
+    <label for="lazy">
+      <input id="lazy" value="lazy" type="checkbox" name="personality" />
+      Lazy
+    </label>
+    <label for="energetic">
+      <input
+        id="energetic"
+        value="energetic"
+        type="checkbox"
+        name="personality"
+      />
+      Energetic
+    </label>
+    <br />
+
+    <input type="text" placeholder="cat photo URL" required />
+    <button type="submit">Submit</button>
+  </form>
+</main>
+```

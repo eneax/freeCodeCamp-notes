@@ -1,0 +1,139 @@
+/* General Styles */
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.75rem;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+    120deg,
+    rgba(48, 48, 148, 0.7),
+    rgba(126, 126, 186, 0.9)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+label {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border: none;
+}
+
+/* Specific Styles */
+.container {
+  width: 100%;
+  margin: 3rem auto 1rem auto;
+}
+
+header {
+  padding: 0 1rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.2;
+}
+
+#title {
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+  font-weight: 200;
+}
+
+form#survey-form {
+  background-color: var(--color-darkblue-alpha);
+  padding: 3.5rem 2.5rem;
+  border-radius: 0.5rem;
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.form-group {
+  margin: 0 auto 1.5rem auto;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  height: 4rem;
+  padding: 0.5rem 1rem;
+  color: var(--color-darkblue);
+  background-color: var(--color-white);
+  border: 1px solid #cecece;
+  border-radius: 0.25rem;
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 1.25rem;
+  color: var(--color-white);
+}
+
+.input-radio,
+.input-checkbox {
+  margin-right: 0.5rem;
+}
+
+.input-textarea {
+  padding: 0.75rem;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-control:focus,
+.input-textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+button#submit {
+  background-color: var(--color-green);
+  padding: 0.75rem;
+  cursor: pointer;
+}

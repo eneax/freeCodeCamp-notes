@@ -1,0 +1,243 @@
+/* General Styles */
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.75rem;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: #4d4e53;
+  background-color: #ffffff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--main-red);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.nav-links {
+  display: flex;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-links a:hover {
+  background-color: var(--main-blue);
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+}
+
+/* Welcome */
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+h1 {
+  font-size: 6rem;
+  color: var(--main-white);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+#welcome-section p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+  margin-top: 0;
+}
+
+@media (max-width: 28.75em) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Projects */
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background-color: var(--main-blue);
+  color: var(--main-white);
+}
+
+.projects-header {
+  font-size: 4rem;
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 2px solid var(--main-white);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.project-tile {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.project-image {
+  height: calc(100% - 11rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background-color: var(--main-gray);
+  transition: background 0.25s ease-out;
+}
+.btn-show-all:hover {
+  background-color: var(--main-red);
+}
+
+.btn-show-all i {
+  margin-left: 1rem;
+  transform: translateX(0);
+  transition: transform 0.25s ease-out;
+}
+
+@media (max-width: 28.75em) {
+  .projects-header {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 30.625em) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 82vh;
+  padding: 0 2rem;
+  background-color: var(--main-gray);
+  color: var(--main-white);
+}
+
+.contact-section-header h2 {
+  font-size: 6rem;
+  margin-bottom: 0;
+}
+
+.contact-section-header p {
+  font-style: italic;
+  margin-top: 0;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.25s ease;
+}
+.contact-details:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Footer */
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--main-gray);
+  color: var(--main-white);
+  border-top: 4px solid var(--main-red);
+}
